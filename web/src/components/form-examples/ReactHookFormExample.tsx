@@ -44,11 +44,11 @@ export function ReactHookFormExample() {
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         {/* First Name Field */}
         <div>
-          <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="rhf-firstName" className="block text-sm font-medium text-gray-700 mb-1">
             First Name
           </label>
           <input
-            id="firstName"
+            id="rhf-firstName"
             {...register('firstName', {
               required: 'First name is required',
               minLength: {
@@ -69,11 +69,11 @@ export function ReactHookFormExample() {
 
         {/* Last Name Field */}
         <div>
-          <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="rhf-lastName" className="block text-sm font-medium text-gray-700 mb-1">
             Last Name
           </label>
           <input
-            id="lastName"
+            id="rhf-lastName"
             {...register('lastName', {
               required: 'Last name is required',
               minLength: {
@@ -94,11 +94,11 @@ export function ReactHookFormExample() {
 
         {/* Email Field */}
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="rhf-email" className="block text-sm font-medium text-gray-700 mb-1">
             Email
           </label>
           <input
-            id="email"
+            id="rhf-email"
             type="email"
             {...register('email', {
               required: 'Email is required',
@@ -120,11 +120,11 @@ export function ReactHookFormExample() {
 
         {/* Age Field */}
         <div>
-          <label htmlFor="age" className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="rhf-age" className="block text-sm font-medium text-gray-700 mb-1">
             Age
           </label>
           <input
-            id="age"
+            id="rhf-age"
             type="number"
             {...register('age', {
               required: 'Age is required',
@@ -151,12 +151,12 @@ export function ReactHookFormExample() {
         {/* Newsletter Checkbox */}
         <div className="flex items-center">
           <input
-            id="newsletter"
+            id="rhf-newsletter"
             type="checkbox"
             {...register('newsletter')}
             className="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded"
           />
-          <label htmlFor="newsletter" className="ml-2 block text-sm text-gray-700">
+          <label htmlFor="rhf-newsletter" className="ml-2 block text-sm text-gray-700">
             Subscribe to newsletter
           </label>
         </div>

@@ -44,11 +44,11 @@ export function TanStackFormExample() {
         >
           {(field) => (
             <div>
-              <label htmlFor={field.name} className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor={`tanstack-${field.name}`} className="block text-sm font-medium text-gray-700 mb-1">
                 First Name
               </label>
               <input
-                id={field.name}
+                id={`tanstack-${field.name}`}
                 name={field.name}
                 value={field.state.value}
                 onBlur={field.handleBlur}
@@ -76,11 +76,11 @@ export function TanStackFormExample() {
         >
           {(field) => (
             <div>
-              <label htmlFor={field.name} className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor={`tanstack-${field.name}`} className="block text-sm font-medium text-gray-700 mb-1">
                 Last Name
               </label>
               <input
-                id={field.name}
+                id={`tanstack-${field.name}`}
                 name={field.name}
                 value={field.state.value}
                 onBlur={field.handleBlur}
@@ -110,11 +110,11 @@ export function TanStackFormExample() {
         >
           {(field) => (
             <div>
-              <label htmlFor={field.name} className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor={`tanstack-${field.name}`} className="block text-sm font-medium text-gray-700 mb-1">
                 Email
               </label>
               <input
-                id={field.name}
+                id={`tanstack-${field.name}`}
                 name={field.name}
                 type="email"
                 value={field.state.value}
@@ -143,11 +143,11 @@ export function TanStackFormExample() {
         >
           {(field) => (
             <div>
-              <label htmlFor={field.name} className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor={`tanstack-${field.name}`} className="block text-sm font-medium text-gray-700 mb-1">
                 Age
               </label>
               <input
-                id={field.name}
+                id={`tanstack-${field.name}`}
                 name={field.name}
                 type="number"
                 value={field.state.value}
@@ -167,14 +167,14 @@ export function TanStackFormExample() {
           {(field) => (
             <div className="flex items-center">
               <input
-                id={field.name}
+                id={`tanstack-${field.name}`}
                 name={field.name}
                 type="checkbox"
                 checked={field.state.value}
                 onChange={(e) => field.handleChange(e.target.checked)}
                 className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
               />
-              <label htmlFor={field.name} className="ml-2 block text-sm text-gray-700">
+              <label htmlFor={`tanstack-${field.name}`} className="ml-2 block text-sm text-gray-700">
                 Subscribe to newsletter
               </label>
             </div>

@@ -74,11 +74,11 @@ export function FormikExample() {
           <Form className="space-y-4">
             {/* First Name Field */}
             <div>
-              <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="formik-firstName" className="block text-sm font-medium text-gray-700 mb-1">
                 First Name
               </label>
               <Field
-                id="firstName"
+                id="formik-firstName"
                 name="firstName"
                 type="text"
                 placeholder="Enter first name"
@@ -97,11 +97,11 @@ export function FormikExample() {
 
             {/* Last Name Field */}
             <div>
-              <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="formik-lastName" className="block text-sm font-medium text-gray-700 mb-1">
                 Last Name
               </label>
               <Field
-                id="lastName"
+                id="formik-lastName"
                 name="lastName"
                 type="text"
                 placeholder="Enter last name"
@@ -120,11 +120,11 @@ export function FormikExample() {
 
             {/* Email Field */}
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="formik-email" className="block text-sm font-medium text-gray-700 mb-1">
                 Email
               </label>
               <Field
-                id="email"
+                id="formik-email"
                 name="email"
                 type="email"
                 placeholder="Enter email"
@@ -143,11 +143,11 @@ export function FormikExample() {
 
             {/* Age Field */}
             <div>
-              <label htmlFor="age" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="formik-age" className="block text-sm font-medium text-gray-700 mb-1">
                 Age
               </label>
               <Field
-                id="age"
+                id="formik-age"
                 name="age"
                 type="number"
                 className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 ${
@@ -164,12 +164,12 @@ export function FormikExample() {
             {/* Newsletter Checkbox */}
             <div className="flex items-center">
               <Field
-                id="newsletter"
+                id="formik-newsletter"
                 name="newsletter"
                 type="checkbox"
                 className="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
               />
-              <label htmlFor="newsletter" className="ml-2 block text-sm text-gray-700">
+              <label htmlFor="formik-newsletter" className="ml-2 block text-sm text-gray-700">
                 Subscribe to newsletter
               </label>
             </div>
