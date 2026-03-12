@@ -1,3 +1,5 @@
 export { TanStackFormExample } from './TanStackFormExample'
 export { ReactHookFormExample } from './ReactHookFormExample'
 export { FormikExample } from './FormikExample'
+export { FormComparison } from './FormComparison'
+export { CodePlayground } from './CodePlayground'

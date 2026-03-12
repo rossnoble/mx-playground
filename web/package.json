@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@apollo/client": "^4.1.4",
+    "@codesandbox/sandpack-react": "^2.20.0",
     "@tanstack/react-form": "^1.28.4",
     "formik": "^2.4.9",
     "graphql": "^16.12.0",

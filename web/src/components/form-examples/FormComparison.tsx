@@ -2,6 +2,15 @@ import { useState } from 'react'
 import { TanStackFormExample } from './TanStackFormExample'
 import { ReactHookFormExample } from './ReactHookFormExample'
 import { FormikExample } from './FormikExample'
+import { CodePlayground } from './CodePlayground'
+import {
+  tanstackFormCode,
+  tanstackFormDependencies,
+  reactHookFormCode,
+  reactHookFormDependencies,
+  formikCode,
+  formikDependencies,
+} from './code-snippets'
 
 type Tab = 'comparison' | 'demo'
 type FormLibrary = 'all' | 'tanstack' | 'react-hook-form' | 'formik'
@@ -242,19 +251,40 @@ export function FormComparison() {
             </div>
 
             {/* Form Examples */}
-            <div
-              className={`grid gap-6 ${
-                activeView === 'all' ? 'md:grid-cols-2 lg:grid-cols-3' : 'max-w-xl mx-auto'
-              }`}
-            >
-              {(activeView === 'all' || activeView === 'tanstack') && (
+            {activeView === 'all' ? (
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <TanStackFormExample />
-              )}
-              {(activeView === 'all' || activeView === 'react-hook-form') && (
                 <ReactHookFormExample />
-              )}
-              {(activeView === 'all' || activeView === 'formik') && <FormikExample />}
-            </div>
+                <FormikExample />
+              </div>
+            ) : (
+              <div className="max-w-6xl mx-auto">
+                {activeView === 'tanstack' && (
+                  <CodePlayground
+                    code={tanstackFormCode}
+                    dependencies={tanstackFormDependencies}
+                    title="TanStack Form - Interactive Editor"
+                    accentColor="#2563eb"
+                  />
+                )}
+                {activeView === 'react-hook-form' && (
+                  <CodePlayground
+                    code={reactHookFormCode}
+                    dependencies={reactHookFormDependencies}
+                    title="React Hook Form - Interactive Editor"
+                    accentColor="#16a34a"
+                  />
+                )}
+                {activeView === 'formik' && (
+                  <CodePlayground
+                    code={formikCode}
+                    dependencies={formikDependencies}
+                    title="Formik - Interactive Editor"
+                    accentColor="#9333ea"
+                  />
+                )}
+              </div>
+            )}
           </>
         )}
       </div>
