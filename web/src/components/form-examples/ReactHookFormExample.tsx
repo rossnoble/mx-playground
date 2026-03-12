@@ -37,9 +37,6 @@ export function ReactHookFormExample() {
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
       <h2 className="text-xl font-bold text-gray-800 mb-4">React Hook Form</h2>
-      <p className="text-sm text-gray-500 mb-4">
-        Performant, flexible and extensible forms with easy-to-use validation
-      </p>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         {/* First Name Field */}
@@ -175,17 +172,6 @@ export function ReactHookFormExample() {
           {isSubmitting ? 'Submitting...' : 'Submit'}
         </button>
       </form>
-
-      <div className="mt-4 p-3 bg-gray-50 rounded text-xs">
-        <strong>Key Features:</strong>
-        <ul className="list-disc list-inside mt-1 text-gray-600">
-          <li>Uncontrolled inputs with ref-based registration</li>
-          <li>Built-in HTML validation alignment</li>
-          <li>Minimal re-renders (best performance)</li>
-          <li>Easy integration with UI libraries</li>
-          <li>~9kb gzipped</li>
-        </ul>
-      </div>
     </div>
   )
 }

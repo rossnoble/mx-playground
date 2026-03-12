@@ -19,9 +19,6 @@ export function TanStackFormExample() {
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
       <h2 className="text-xl font-bold text-gray-800 mb-4">TanStack Form</h2>
-      <p className="text-sm text-gray-500 mb-4">
-        Type-safe, performant, framework-agnostic form library
-      </p>
 
       <form
         onSubmit={(e) => {
@@ -194,17 +191,6 @@ export function TanStackFormExample() {
           )}
         </form.Subscribe>
       </form>
-
-      <div className="mt-4 p-3 bg-gray-50 rounded text-xs">
-        <strong>Key Features:</strong>
-        <ul className="list-disc list-inside mt-1 text-gray-600">
-          <li>First-class TypeScript support</li>
-          <li>Framework agnostic (React, Vue, Solid, Angular)</li>
-          <li>Granular reactivity with subscriptions</li>
-          <li>Built-in async validation support</li>
-          <li>~5kb gzipped</li>
-        </ul>
-      </div>
     </div>
   )
 }

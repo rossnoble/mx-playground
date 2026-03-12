@@ -59,9 +59,6 @@ export function FormikExample() {
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
       <h2 className="text-xl font-bold text-gray-800 mb-4">Formik</h2>
-      <p className="text-sm text-gray-500 mb-4">
-        Build forms in React, without the tears
-      </p>
 
       <Formik
         initialValues={initialValues}
@@ -185,17 +182,6 @@ export function FormikExample() {
           </Form>
         )}
       </Formik>
-
-      <div className="mt-4 p-3 bg-gray-50 rounded text-xs">
-        <strong>Key Features:</strong>
-        <ul className="list-disc list-inside mt-1 text-gray-600">
-          <li>Declarative render props pattern</li>
-          <li>Built-in Field and ErrorMessage components</li>
-          <li>Works great with Yup schema validation</li>
-          <li>Battle-tested in production (Airbnb, Stripe, etc.)</li>
-          <li>~13kb gzipped</li>
-        </ul>
-      </div>
     </div>
   )
 }
