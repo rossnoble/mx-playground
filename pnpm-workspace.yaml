@@ -1,0 +1,6 @@
+packages:
+  - api
+  - web
+allowBuilds:
+  '@apollo/protobufjs': false
+  esbuild: false
