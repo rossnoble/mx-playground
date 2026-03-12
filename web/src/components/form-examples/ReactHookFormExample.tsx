@@ -15,6 +15,7 @@ export function ReactHookFormExample() {
     watch,
     formState: { errors, isSubmitting },
   } = useForm<FormData>({
+    mode: 'onSubmit', // Validate only on form submission
     defaultValues: {
       firstName: '',
       lastName: '',

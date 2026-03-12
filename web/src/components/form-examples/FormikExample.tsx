@@ -66,6 +66,8 @@ export function FormikExample() {
       <Formik
         initialValues={initialValues}
         validate={validate}
+        validateOnChange={false}
+        validateOnBlur={false}
         onSubmit={handleSubmit}
       >
         {({ isSubmitting, errors, touched }) => (

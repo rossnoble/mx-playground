@@ -35,8 +35,11 @@ export function TanStackFormExample() {
         <form.Field
           name="firstName"
           validators={{
-            onChange: ({ value }) =>
-              value.length < 2 ? 'First name must be at least 2 characters' : undefined,
+            onSubmit: ({ value }) => {
+              if (!value) return 'First name is required'
+              if (value.length < 2) return 'First name must be at least 2 characters'
+              return undefined
+            },
           }}
         >
           {(field) => (
@@ -64,8 +67,11 @@ export function TanStackFormExample() {
         <form.Field
           name="lastName"
           validators={{
-            onChange: ({ value }) =>
-              value.length < 2 ? 'Last name must be at least 2 characters' : undefined,
+            onSubmit: ({ value }) => {
+              if (!value) return 'Last name is required'
+              if (value.length < 2) return 'Last name must be at least 2 characters'
+              return undefined
+            },
           }}
         >
           {(field) => (
@@ -93,7 +99,7 @@ export function TanStackFormExample() {
         <form.Field
           name="email"
           validators={{
-            onChange: ({ value }) => {
+            onSubmit: ({ value }) => {
               if (!value) return 'Email is required'
               if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
                 return 'Invalid email address'
@@ -128,7 +134,7 @@ export function TanStackFormExample() {
         <form.Field
           name="age"
           validators={{
-            onChange: ({ value }) => {
+            onSubmit: ({ value }) => {
               if (value < 18) return 'Must be at least 18 years old'
               if (value > 120) return 'Please enter a valid age'
               return undefined
